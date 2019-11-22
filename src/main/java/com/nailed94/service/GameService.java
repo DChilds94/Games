@@ -27,6 +27,20 @@ public class GameService {
             games.add(game);
         }
 
+        public void updateGame(Game game, Integer id) {
+            for (int i = 0; i < games.size() ; i++) {
+                Game g = games.get(i);
+                if (g.getId().equals(id)) {
+                    games.set(i, game);
+                    return;
+                }
+            }
+        }
+
+        public void deleteById(Integer id) {
+            games.removeIf(game -> game.getId().equals(id));
+        }
+
 
 
 }

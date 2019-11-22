@@ -27,4 +27,15 @@ public class GameController {
     public void addGame(@RequestBody Game game) {
         gameService.addGame(game);
     }
+
+    @PutMapping("games/{id}")
+    public void updateGame(@RequestBody Game game, @PathVariable Integer id) {
+        gameService.updateGame(game, id);
+    }
+
+    @DeleteMapping("games/{id}")
+    public void deleteGame(@PathVariable Integer id) {
+        gameService.deleteById(id);
+    }
+
 }
