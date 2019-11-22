@@ -11,3 +11,5 @@ public class App {
     }
 
 }
+
+//TODO consider spliting the structure per domain object
